@@ -1,3 +1,4 @@
+import sys
 
 class InversionCalculator(object):
 
@@ -55,5 +56,7 @@ class InversionCalculator(object):
 
 if __name__ == '__main__':
     calculator = InversionCalculator()
-    calculator.read_input('ints.txt')
-    print(calculator.sort())
+    in_file = sys.argv[1] if len(sys.argv) > 1 else None
+    calculator.read_input()
+    calculator.sort()
+    print(calculator.inversions)
