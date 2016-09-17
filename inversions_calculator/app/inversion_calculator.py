@@ -41,6 +41,7 @@ class InversionCalculator(object):
             else:
                 array[i] = second_half[k]
                 k += 1
+                self._inversions += (len(first_half) - j)
             i += 1
         while j < len(first_half):
             array[i] = first_half[j]
@@ -49,7 +50,7 @@ class InversionCalculator(object):
         while k < len(second_half):
             array[i] = second_half[k]
             k += 1
-            j += 1
+            i += 1
         return array
 
 if __name__ == '__main__':
