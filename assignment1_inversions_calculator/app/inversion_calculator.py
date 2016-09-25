@@ -30,7 +30,7 @@ class InversionCalculator(object):
         return self._merge_sort(array)
 
     def _merge_sort(self, array):
-        if len(array) == 1:
+        if len(array) <= 1:
             return array
         mid = (len(array)) // 2
         first_half = self._merge_sort(array[:mid])
