@@ -1,8 +1,13 @@
 class ComparisonCounter(object):
     def __init__(self, input_file=None):
+        self._comparisons = 0
         self._array = []
         self._inversions = 0
         self.read_input(input_file)
+
+    @property
+    def comparisons(self):
+        return self._comparisons
 
     @property
     def array(self):
@@ -20,7 +25,7 @@ class ComparisonCounter(object):
             for number in numbers:
                 self._array.append(int(number))
 
-    def sort(self,):
+    def sort(self):
         if len(self._array) <= 1:
             return
         self._qsort(0, len(self._array) - 1)
@@ -33,6 +38,7 @@ class ComparisonCounter(object):
         self._qsort(pivot + 1, end)
 
     def _partition(self, start, end):
+        self._comparisons += end - start
         pivot = start
         for i in range(start + 1, end + 1):
             if self._array[i] < self._array[start]:
