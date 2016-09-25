@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from inversions_calculator.app.inversion_calculator import InversionCalculator
+from assignment1_inversions_calculator.app.inversion_calculator import InversionCalculator
 
 
 class InversionCalculatorTest(unittest.TestCase):
@@ -25,7 +25,7 @@ class InversionCalculatorTest(unittest.TestCase):
 
     @patch('builtins.input', return_value='9 12 3 1 6 8 2 5 14 13 11 7 10 4 0')
     def test_calculator_counts_inversions(self, stdin):
-        """InversionCalculator.sort() should sort the given array"""
+        """InversionCalculator.sort() should correctly count the number of inversions"""
         calculator = InversionCalculator()
         calculator.read_input()
         calculator.sort()

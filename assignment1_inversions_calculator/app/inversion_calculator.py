@@ -1,5 +1,6 @@
 import sys
 
+
 class InversionCalculator(object):
 
     def __init__(self):
@@ -15,11 +16,11 @@ class InversionCalculator(object):
     def array(self):
         return self._array
 
-    def read_input(self, in_file=None):
-        if in_file is None:
+    def read_input(self, input_file=None):
+        if input_file is None:
             self._array = [int(elem) for elem in input().split()]
             return
-        with open(in_file) as numbers:
+        with open(input_file) as numbers:
             for number in numbers:
                 self._array.append(int(number))
 
