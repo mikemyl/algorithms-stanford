@@ -1,4 +1,4 @@
-class ComparisonCounter(object):
+class QuickSorter(object):
     def __init__(self, input_file=None):
         self._comparisons = 0
         self._array = []
@@ -37,6 +37,31 @@ class ComparisonCounter(object):
         self._qsort(start, pivot - 1)
         self._qsort(pivot + 1, end)
 
+
+class QuickSorterFirstElementPivot(QuickSorter):
+    def _partition(self, start, end):
+        self._comparisons += end - start
+        pivot = start
+        for i in range(start + 1, end + 1):
+            if self._array[i] < self._array[start]:
+                pivot += 1
+                self._array[i], self._array[pivot] = self._array[pivot], self._array[i]
+        self._array[start], self._array[pivot] = self._array[pivot], self._array[start]
+        return pivot
+
+
+class QuickSorterLastElementPivot(QuickSorter):
+    def _partition(self, start, end):
+        self._comparisons += end - start
+        pivot = start
+        for i in range(start + 1, end + 1):
+            if self._array[i] < self._array[start]:
+                pivot += 1
+                self._array[i], self._array[pivot] = self._array[pivot], self._array[i]
+        self._array[start], self._array[pivot] = self._array[pivot], self._array[start]
+        return pivot
+
+class QuickSorterMedianElementPivot(QuickSorter):
     def _partition(self, start, end):
         self._comparisons += end - start
         pivot = start
