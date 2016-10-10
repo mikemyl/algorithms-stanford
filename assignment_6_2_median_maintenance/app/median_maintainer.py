@@ -32,5 +32,5 @@ class MedianMaintainer:
             self._heap_high.push(self._heap_low.pop())
         elif len(self._heap_high) - len(self._heap_low) > 1:
             self._heap_low.push(self._heap_high.pop())
-        self._median_sum += self._heap_low.peek() if len(self._heap_low) > len(
+        self._median_sum += self._heap_low.peek() if len(self._heap_low) >= len(
             self._heap_high) else self._heap_high.peek()
