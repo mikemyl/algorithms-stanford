@@ -15,3 +15,9 @@ class Heap(object):
 
     def pop(self):
         return heapq.heappop(self._data)[1]
+
+    def peek(self):
+        return self._data[0][1]
+
+    def __len__(self):
+        return len(self._data)
