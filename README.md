@@ -11,4 +11,5 @@ form!) - we only need to provide the final answer. I won't paste the plain resul
 module of each assignment to get the result. Hopefully, he will read the algorithm developed :) 
 
 * [Programming Assignment 1 - Inversions Calculation](assignment1_inversions_calculator)
+* [Programming Assignment 2 - QuickSort](assignment2_quicksort_count_comparisons)
 

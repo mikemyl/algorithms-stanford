@@ -33,13 +33,11 @@ class QuickSorter(object):
     def _qsort(self, start, end):
         if start >= end:
             return
-        pivot = self._partition(start, end)
+        pivot = self.partition(start, end)
         self._qsort(start, pivot - 1)
         self._qsort(pivot + 1, end)
 
-
-class QuickSorterFirstElementPivot(QuickSorter):
-    def _partition(self, start, end):
+    def partition(self, start, end):
         self._comparisons += end - start
         pivot = start
         for i in range(start + 1, end + 1):
@@ -48,23 +46,25 @@ class QuickSorterFirstElementPivot(QuickSorter):
                 self._array[i], self._array[pivot] = self._array[pivot], self._array[i]
         self._array[start], self._array[pivot] = self._array[pivot], self._array[start]
         return pivot
+
+
+class QuickSorterFirstElementPivot(QuickSorter):
+    def partition(self, start, end):
+        return super(QuickSorterFirstElementPivot, self).partition(start, end)
 
 
 class QuickSorterLastElementPivot(QuickSorter):
-    def _partition(self, start, end):
+    def partition(self, start, end):
         self._array[start], self._array[end] = self._array[end], self._array[start]
-        self._comparisons += end - start
-        pivot = start
-        for i in range(start + 1, end + 1):
-            if self._array[i] < self._array[start]:
-                pivot += 1
-                self._array[i], self._array[pivot] = self._array[pivot], self._array[i]
-        self._array[start], self._array[pivot] = self._array[pivot], self._array[start]
-        return pivot
+        return super(QuickSorterLastElementPivot, self).partition(start, end)
 
 
 class QuickSorterMedianElementPivot(QuickSorter):
-    def _partition(self, start, end):
+    def partition(self, start, end):
+        self._choose_median_pivot(start, end)
+        return super(QuickSorterMedianElementPivot, self).partition(start, end)
+
+    def _choose_median_pivot(self, start, end):
         length = end - start + 1
         median_index = length // 2 - 1 if length % 2 == 0 else length // 2
         median = start + median_index
@@ -74,17 +74,10 @@ class QuickSorterMedianElementPivot(QuickSorter):
         elif self._array[median] <= self._array[end] <= self._array[start] or self._array[start] <= self._array[end] <= \
                 self._array[median]:
             self._array[start], self._array[end] = self._array[end], self._array[start]
-        self._comparisons += end - start
-        pivot = start
-        for i in range(start + 1, end + 1):
-            if self._array[i] < self._array[start]:
-                pivot += 1
-                self._array[i], self._array[pivot] = self._array[pivot], self._array[i]
-        self._array[start], self._array[pivot] = self._array[pivot], self._array[start]
-        return pivot
 
 if __name__ == '__main__':
-    sorters = (QuickSorterFirstElementPivot('assignment_2.txt'), QuickSorterLastElementPivot('assignment_2.txt'),
+    sorters = (QuickSorterFirstElementPivot('assignment_2.txt'),
+               QuickSorterLastElementPivot('assignment_2.txt'),
                QuickSorterMedianElementPivot('assignment_2.txt'))
     for sorter in sorters:
         sorter.sort()
