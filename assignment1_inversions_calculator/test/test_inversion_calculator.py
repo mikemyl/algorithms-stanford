@@ -21,14 +21,14 @@ class InversionCalculatorTest(unittest.TestCase):
         calculator = InversionCalculator()
         calculator.read_input()
         expected = [0, 1, 2, 3, 5]
-        self.assertEqual(expected, calculator.sort())
+        self.assertEqual(expected, calculator.merge_sort())
 
     @patch('builtins.input', return_value='9 12 3 1 6 8 2 5 14 13 11 7 10 4 0')
     def test_calculator_counts_inversions(self, stdin):
         """InversionCalculator.sort() should correctly count the number of inversions"""
         calculator = InversionCalculator()
         calculator.read_input()
-        calculator.sort()
+        calculator.merge_sort()
         expected_inversions = 56
         self.assertEqual(expected_inversions, calculator.inversions)
 

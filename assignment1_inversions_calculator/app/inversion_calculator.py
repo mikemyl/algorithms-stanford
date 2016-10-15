@@ -1,15 +1,10 @@
-import sys
-
-
 class InversionCalculator(object):
-
     def __init__(self):
         self._array = []
         self._inversions = 0
 
     @property
     def inversions(self):
-        """Return the number of inversions of the given list of numbers"""
         return self._inversions
 
     @property
@@ -24,17 +19,20 @@ class InversionCalculator(object):
             for number in numbers:
                 self._array.append(int(number))
 
-    def sort(self, array=None):
+    def merge_sort(self, array=None):
         if array is None:
             array = self._array
-        return self._merge_sort(array)
+        return self._sort(array)
 
-    def _merge_sort(self, array):
+    def _sort(self, array):
         if len(array) <= 1:
             return array
         mid = (len(array)) // 2
-        first_half = self._merge_sort(array[:mid])
-        second_half = self._merge_sort(array[mid:])
+        first_half = self._sort(array[:mid])
+        second_half = self._sort(array[mid:])
+        return self._merge(array, first_half, second_half)
+
+    def _merge(self, array, first_half, second_half):
         i, j, k = 0, 0, 0
         while j < len(first_half) and k < len(second_half):
             if first_half[j] <= second_half[k]:
@@ -57,7 +55,6 @@ class InversionCalculator(object):
 
 if __name__ == '__main__':
     calculator = InversionCalculator()
-    in_file = sys.argv[1] if len(sys.argv) > 1 else None
-    calculator.read_input()
-    calculator.sort()
+    calculator.read_input("ints.txt")
+    calculator.merge_sort()
     print(calculator.inversions)
