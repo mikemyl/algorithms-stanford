@@ -37,12 +37,3 @@ class MinCutterTest(unittest.TestCase):
             if cut < min_cut:
                 min_cut = cut
         self.assertEqual(min_cut, 3)
-
-    def test_eventually_finds_min_cut_coursera_testcase(self):
-        min_cut = 99999
-        for i in range(40000):
-            min_cutter = KargerMinCutter('assignment3.txt')
-            cut = min_cutter.find_min_cut()
-            if cut < min_cut:
-                min_cut = cut
-            print(min_cut)
