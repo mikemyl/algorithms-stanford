@@ -1,7 +1,7 @@
 # Programming Assignment 3 - Graph minimum cut
                              
 
-In this first programming assignment we are given [this](app/assignment3.txt) graph
+In the third programming assignment we are given [this](app/assignment3.txt) graph
 and our goal is to comput the [minimum cut](https://en.wikipedia.org/wiki/Minimum_cut). 
 
 We 've learned a super cool algorithm during this week of the course, the [Karger's algorithm](https://en.wikipedia.org/wiki/Karger%27s_algorithm)

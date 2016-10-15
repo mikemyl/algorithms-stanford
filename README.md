@@ -13,4 +13,5 @@ module of each assignment to get the result. Hopefully, he will have a look at t
 * [Programming Assignment 1 - Inversions Calculation](assignment1_inversions_calculator)
 * [Programming Assignment 2 - QuickSort](assignment2_quicksort_count_comparisons)
 * [Programming Assignment 3 - Karger's min cut](assignment3_karger_min_cut)
+* [Programming Assignment 4 - Strongly Connected Components](assignment4_strongly_connected_components)
 

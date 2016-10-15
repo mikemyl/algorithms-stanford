@@ -1,7 +1,7 @@
 # Programming Assignment 2 - QuickSort Count Comparisons
                              
 
-In this first programming assignment we are given [this](app/assignment_2.txt) long list of integers
+In the second programming assignment we are given [this](app/assignment_2.txt) long list of integers
 and our goal is to sort them using quick sort. More specifically, we should evaluate three different
 choices for the pivot element of the partition subroutine:
 - Use the first element as the pivot
