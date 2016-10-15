@@ -37,3 +37,12 @@ class KargerMinCutter:
                 from_vertex = vertex
                 to_vertex = vertex_edges[rand_edge]
                 return from_vertex, to_vertex
+
+if __name__ == "__main__":
+    min_cut = 99999
+    for i in range(40000):
+        min_cutter = KargerMinCutter('assignment3.txt')
+        cut = min_cutter.find_min_cut()
+        if cut < min_cut:
+            min_cut = cut
+        print(min_cut)
