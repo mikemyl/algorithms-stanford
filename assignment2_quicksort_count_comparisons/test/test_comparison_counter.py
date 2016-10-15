@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from assignment2_quciksort_count_comparisons.app.comparison_counter import QuickSorterFirstElementPivot, \
+from assignment2_quicksort_count_comparisons.app.comparison_counter import QuickSorterFirstElementPivot, \
     QuickSorterLastElementPivot, QuickSorterMedianElementPivot
 
 

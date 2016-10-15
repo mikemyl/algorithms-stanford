@@ -8,7 +8,7 @@ functionality of the modules-classes that were developed.
 
 It is not required for our programs that were developed for each assignment to be submitted (in fact, even if we wanted to submit there is no such 
 form!) - we only need to provide the final answer. I won't paste the plain result of each assignment here, so one should at least run the main
-module of each assignment to get the result. Hopefully, he will read the algorithm developed :) 
+module of each assignment to get the result. Hopefully, he will have a look at the algorithm :) 
 
 * [Programming Assignment 1 - Inversions Calculation](assignment1_inversions_calculator)
 * [Programming Assignment 2 - QuickSort](assignment2_quicksort_count_comparisons)
