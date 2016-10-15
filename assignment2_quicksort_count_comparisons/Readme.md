@@ -1,4 +1,4 @@
-# Programming Assignment 1 - Inversions Calculator
+# Programming Assignment 2 - QuickSort Count Comparisons
                              
 
 In this first programming assignment we are given [this](app/assignment_2.txt) long list of integers
@@ -85,10 +85,10 @@ Each sorter is  a `QuickSorter` object, so it inherits the `sort()` method, whil
 own implementation of the partition method
 
 
-Solver:
+##### Solver:
 
 * [comparison_counter](app/comparison_counter.py)
 
-Unittests:
+##### Unittests:
 
 * [test_comparison_counter](test/test_comparison_counter.py)

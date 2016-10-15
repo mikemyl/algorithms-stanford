@@ -33,14 +33,14 @@ one additional line of code to our merge subroutine, we were able to count these
 ```
 
 
-### Challenges
+##### Challenges
 * Employ this trick to merge sort to count the inversions, so as to avoid the brute-force checking of every pair.
 
 
-Solver:
+##### Solver:
 
 * [inversion_calculator.py](app/inversion_calculator.py)
 
-Unittests:
+##### Unittests:
 
 * [test_inversion_calculator.py](test/test_inversion_calculator.py)

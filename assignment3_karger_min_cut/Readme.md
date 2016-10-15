@@ -1,4 +1,4 @@
-# Programming Assignment 1 - Inversions Calculator
+# Programming Assignment 3 - Graph minimum cut
                              
 
 In this first programming assignment we are given [this](app/assignment3.txt) graph
@@ -61,10 +61,10 @@ and then pick a random edge of this vertex. If a vertex has 10 edges and another
 get selected under equal possibilities.
 * Run the algorithm as many times as needed (define how many?), to guarantee that the min cut is going to be indeed the min.
 
-Solver:
+##### Solver:
 
 * [min_cutter.py](app/min_cutter.py)
 
-Unittests:
+##### Unittests:
 
 * [test_min_cutter.py](test/test_min_cutter.py)
