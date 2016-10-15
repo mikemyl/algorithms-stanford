@@ -47,12 +47,5 @@ class MyTestCase(unittest.TestCase):
         expected_sccs = [6, 3, 2, 1]
         self.assertEqual(scc_finder.scc_list, expected_sccs)
 
-    def test_scc_computes_sccs_coursera_large_testcase(self):
-        scc_finder = SccFinder("assignment_4.txt")
-        scc_finder.compute_finish_times()
-        scc_finder.compute_sccs()
-        expected_sccs = [434821, 968, 459, 313, 211]
-        self.assertEqual(scc_finder.scc_list[:5], expected_sccs)
-
 if __name__ == '__main__':
     unittest.main()
