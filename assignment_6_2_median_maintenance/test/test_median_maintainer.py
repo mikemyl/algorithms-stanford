@@ -16,11 +16,5 @@ class TestMedianMaintainer(unittest.TestCase):
         expected_sum = 5
         self.assertEqual(median_sum, expected_sum)
 
-    def test_find_median_sum_coursera_testcase(self):
-        median_maintainer = MedianMaintainer(input_file='assignment_6_2.txt')
-        median_sum = median_maintainer.sum_medians()
-        print(median_sum)
-
-
 if __name__ == '__main__':
     unittest.main()

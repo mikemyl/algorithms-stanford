@@ -34,3 +34,8 @@ class MedianMaintainer:
             self._heap_low.push(self._heap_high.pop())
         self._median_sum += self._heap_low.peek() if len(self._heap_low) >= len(
             self._heap_high) else self._heap_high.peek()
+
+if __name__ == "__main__":
+    median_maintainer = MedianMaintainer(input_file='assignment_6_2.txt')
+    median_sum = median_maintainer.sum_medians()
+    print(median_sum)

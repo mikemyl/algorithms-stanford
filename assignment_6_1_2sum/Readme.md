@@ -1,7 +1,7 @@
 # Programming Assignment 6.1 - Dijkstra Shortest Paths
                              
 
-In the fourth programming assignment we are given [this long list](app/assignment_6-1.txt) of numbers
+In the 6.1 programming assignment we are given [this long list](app/assignment_6-1.txt) of numbers
 and our goal is to compute the number of values `t` in the interval `[-10000, 10000]` such that there are distinct
 numbers x,y that satisfy: `x + y = t`
 
