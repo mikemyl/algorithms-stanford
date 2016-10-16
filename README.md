@@ -15,4 +15,5 @@ module of each assignment to get the result. Hopefully, he will have a look at t
 * [Programming Assignment 3 - Karger's min cut](assignment3_karger_min_cut)
 * [Programming Assignment 4 - Strongly Connected Components](assignment4_strongly_connected_components)
 * [Programming Assignment 5 - Dijkstra's Shortest Paths](assignment5_dijkstra)
+* [Programming Assignment 6.1 - 2SUM range](assignment_6_1_2sum)
 

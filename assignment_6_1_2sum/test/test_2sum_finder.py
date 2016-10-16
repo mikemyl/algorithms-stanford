@@ -10,12 +10,5 @@ class TestTwoSumFinder(unittest.TestCase):
         expected_values = 14
         self.assertEqual(two_sum_finder.compute_values(), expected_values)
 
-    def test_find_2sum_pairs_coursera_test_case(self):
-        two_sum_finder = TwoSumFinder("assignment_6-1.txt")
-        target_values = two_sum_finder.compute_values()
-        print(target_values)
-        self.assertIsNotNone(target_values)
-
-
 if __name__ == '__main__':
     unittest.main()

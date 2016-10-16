@@ -24,3 +24,8 @@ class TwoSumFinder:
                 if pair_num != num:
                     target_values.add(num + pair_num)
         return len(target_values)
+
+if __name__ == "__main__":
+    two_sum_finder = TwoSumFinder("assignment_6-1.txt")
+    target_values = two_sum_finder.compute_values()
+    print(target_values)
