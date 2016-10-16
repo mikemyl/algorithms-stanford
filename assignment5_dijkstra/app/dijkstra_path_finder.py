@@ -33,5 +33,17 @@ class DijkstraPathFinder:
             visited.add(min_edge[0])
         return shortest_paths
 
-
-
+if __name__ == '__main__':
+    path_finder = DijkstraPathFinder('assignment_5.txt')
+    paths = path_finder.compute_shortest_paths()
+    actual = {vertex: distance[0] for (vertex, distance) in paths.items()}
+    print(actual[7])
+    print(actual[37])
+    print(actual[59])
+    print(actual[82])
+    print(actual[99])
+    print(actual[115])
+    print(actual[133])
+    print(actual[165])
+    print(actual[188])
+    print(actual[197])

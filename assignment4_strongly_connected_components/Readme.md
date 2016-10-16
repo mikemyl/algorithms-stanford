@@ -5,7 +5,7 @@ In the fourth programming assignment we are given [this](app/assignment_4.txt) g
 and our goal is to compute the [strongly connected components](https://en.wikipedia.org/wiki/Strongly_connected_component). 
 
 We 've seen in course how to utilize the DFS algorithm (2 times) in order to compute the scc's:
-- The first DFS pass computes the finish times of each vertex
+- The first DFS pass computes the finishing times of each vertex
 - The second DFS computes the scc's
 
 
