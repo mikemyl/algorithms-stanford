@@ -12,14 +12,15 @@ module of each assignment to get the result. Hopefully, he will have a look at t
 
 ##### Part 1:
 
-* [Programming Assignment 1 - Inversions Calculation](assignment1_inversions_calculator)
-* [Programming Assignment 2 - QuickSort](assignment2_quicksort_count_comparisons)
-* [Programming Assignment 3 - Karger's min cut](assignment3_karger_min_cut)
-* [Programming Assignment 4 - Strongly Connected Components](assignment4_strongly_connected_components)
-* [Programming Assignment 5 - Dijkstra's Shortest Paths](assignment5_dijkstra)
-* [Programming Assignment 6.1 - 2SUM range](assignment_6_1_2sum)
-* [Programming Assignment 6.2 - Median Maintenance](assignment_6_2_median_maintenance)
+* [Programming Assignment 1 - Inversions Calculation](part_1/assignment1_inversions_calculator)
+* [Programming Assignment 2 - QuickSort](part1_1/assignment2_quicksort_count_comparisons)
+* [Programming Assignment 3 - Karger's min cut](part_1/assignment3_karger_min_cut)
+* [Programming Assignment 4 - Strongly Connected Components](part_1/assignment4_strongly_connected_components)
+* [Programming Assignment 5 - Dijkstra's Shortest Paths](part_1/assignment5_dijkstra)
+* [Programming Assignment 6.1 - 2SUM range](part_1/assignment_6_1_2sum)
+* [Programming Assignment 6.2 - Median Maintenance](part_1/assignment_6_2_median_maintenance)
 
 ##### Part 2:
 
+* [Programming Assignment 1.1 - Inversions Calculation](part_2/assignment1_greedy_algorithms)
 

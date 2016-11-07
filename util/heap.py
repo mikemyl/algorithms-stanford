@@ -9,6 +9,12 @@ class IndexedMinHeap:
         self._heap.append(item)
         self._siftdown(len(self._heap) - 1)
 
+    def contains(self, item):
+        return item in self._item_to_index
+
+    def value_of(self, item):
+        return self.key(self._heap[self._item_to_index[item]])
+
     def _siftdown(self, position):
         current = position
         item = self._heap[current]
@@ -37,8 +43,8 @@ class IndexedMinHeap:
             lesser_child = 2 * current + 1
             if 2 * current + 2 < len(self._heap) and self.key(self._heap[2 * current + 2]) < self.key(self._heap[lesser_child]):
                 lesser_child = 2 * current + 2
-            if self.key(item) > self.key(lesser_child):
-                self._heap[current], self._heap[lesser_child] = self.key(self._heap[lesser_child]), self._heap[current]
+            if self.key(item) > self.key(self._heap[lesser_child]):
+                self._heap[current], self._heap[lesser_child] = self._heap[lesser_child], self._heap[current]
                 self._item_to_index[self._heap[current]], self._item_to_index[self._heap[lesser_child]] = current, lesser_child
                 current = lesser_child
             else:
@@ -67,7 +73,7 @@ if __name__ == "__main__":
     heap.insert(0)
     heap.insert(9)
     heap.delete(0)
-    print(heap.pop())
+    print(heap.value_of(5))
     print(heap.pop())
     print(heap.pop())
     print(heap.pop())
