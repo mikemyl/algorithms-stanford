@@ -1,6 +1,6 @@
 # Coursera - Algorithms Design and Analysis (Stanford University)
 
-This repo holds my solutions (in Python) to the programming assignments for the [Coursera class - Algorithms: Design and Analysis of Stanford University](https://www.coursera.org/learn/algorithm-design-analysis/home/welcome).
+This repo holds my solutions (in Python 3) to the programming assignments for the [Coursera class - Algorithms: Design and Analysis of Stanford University](https://www.coursera.org/learn/algorithm-design-analysis/home/welcome).
 
 I tried to follow the TDD (Test Driven Development) workflow during this
 course when applicable (we 're writing python here, so that's one more reason to do extensive testing!) so there exist unittests demonstrating the

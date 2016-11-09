@@ -48,8 +48,9 @@ class IndexedMinHeap:
         current = index
         while 2 * current + 1 < len(self._heap):
             lesser_child = 2 * current + 1
-            if 2 * current + 2 < len(self._heap) and self.key(self._heap[2 * current + 2]) < self.key(self._heap[lesser_child]):
-                lesser_child = 2 * current + 2
+            righ_child = 2 * current + 2
+            if righ_child < len(self._heap) and self.key(self._heap[righ_child]) < self.key(self._heap[lesser_child]):
+                lesser_child = righ_child
             if self.key(item) > self.key(self._heap[lesser_child]):
                 self._heap[current] = self._heap[lesser_child]
                 self._item_to_index[self.custom_hash(self._heap[lesser_child])] = current
@@ -69,25 +70,3 @@ class IndexedMinHeap:
         else:
             item = self._heap.pop()
         return item
-
-
-if __name__ == "__main__":
-    #test lient
-    heap = IndexedMinHeap(key= lambda x: x[1], custom_hash=lambda x: x[0])
-    heap.insert((1,2))
-    heap.insert((2,3))
-    heap.insert((3,1))
-    heap.insert((4,5))
-    heap.insert((5,6))
-    heap.insert((6,7))
-    heap.insert((7,0))
-    heap.insert((8,9))
-    heap.delete((2,6))
-    heap.delete((7,5))
-    heap.delete((4,3))
-    heap.delete((6,1))
-    heap.delete((3,2))
-    print(heap.value_of((5,6)))
-    print(heap.pop())
-    print(heap.pop())
-    print(heap.pop())
