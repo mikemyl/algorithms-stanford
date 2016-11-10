@@ -1,4 +1,4 @@
-from util.heap import IndexedMinHeap
+from util.app.heap import IndexedMinHeap
 
 
 class PrimMST:

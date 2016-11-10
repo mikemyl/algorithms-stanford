@@ -23,5 +23,5 @@ module of each assignment to get the result. Hopefully, he will have a look at t
 ##### Part 2:
 
 * [Programming Assignment 1 - Greedy Algorithms - Prim's MST](part_2/assignment1_greedy_algorithms)
-* [Programming Assignment 2- Clustering](part_2/assignment2_clustering)
+* [Programming Assignment 2 - Clustering](part_2/assignment2_clustering)
 
