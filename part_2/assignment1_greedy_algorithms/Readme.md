@@ -104,9 +104,9 @@ edge's weight to be used for the comparisons in the heap.
 ##### Solver:
 
 * [job_scheduler.py](app/job_scheduler.py)
-* [job_scheduler.py](app/prim_mst.py)
+* [prim_mst.py](app/prim_mst.py)
 
 ##### Unittests:
 
 * [test_job_scheduler.py](test/test_job_scheduler.py)
-* [test_job_scheduler.py](test/test_prim_mst.py)
+* [test_prim_mst.py](test/test_prim_mst.py)
