@@ -10,9 +10,10 @@ class UnionFind:
         """
         if size < 1:
             raise ValueError("size should be greater than one")
-        self._size = size + 1
-        self._uf = [None] * self._size
-        for num in range(1, self._size):
+        self.count = size
+        self._size = size
+        self._uf = [None] * (self._size + 1)
+        for num in range(1, self._size + 1):
             self._uf[num] = (num, 0)
 
     def find(self, item):
@@ -29,6 +30,18 @@ class UnionFind:
             parent = self._get_parent(item)
         return parent
 
+    def connected(self, first, second):
+        """
+        Checks whether <first> and <second> are in the same group
+
+        :param first: the first item to be checked
+        :param second: the second item
+        :return: True if connected, else otherwise
+        """
+        if not (1, 1) <= (first, second) <= (self._size, self._size):
+            raise ValueError("Items {}, {} should be in the range [1..{}]".format(first, second, self._size))
+        return self.find(first) == self.find(second)
+
     def union(self, first, second):
         """
         Unions <first> with <second> item
@@ -41,6 +54,9 @@ class UnionFind:
             raise ValueError("Items {}, {} should be in the range [1..{}]".format(first, second, self._size))
         first_parent = self.find(first)
         second_parent = self.find(second)
+        if first_parent == second_parent:
+            return
+        self.count -= 1
         first_rank = self._uf[first_parent][1]
         second_rank = self._uf[second_parent][1]
 
