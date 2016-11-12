@@ -27,7 +27,7 @@ class UnionFind:
             raise ValueError("Item should be in the range [1..{}".format(self._size))
         parent = self._get_parent(item)
         while self._uf[parent][0] != parent:
-            parent = self._get_parent(item)
+            parent = self._get_parent(parent)
         return parent
 
     def connected(self, first, second):
@@ -61,12 +61,12 @@ class UnionFind:
         second_rank = self._uf[second_parent][1]
 
         if first_rank > second_rank:
-            self._uf[second] = self._uf[first]
+            self._uf[second_parent] = self._uf[first_parent][0], self._uf[second_parent][1]
         elif second_rank > first_rank:
-            self._uf[first] = self._uf[second]
+            self._uf[first_parent] = self._uf[second_parent][0], self._uf[first_parent][1]
         else:
-            self._uf[second] = self._uf[first]
-            self._uf[first] = (first, self._uf[first][1] + 1)
+            self._uf[second_parent] = self._uf[first_parent]
+            self._uf[first_parent] = (first_parent, self._uf[first_parent][1] + 1)
 
     def _get_parent(self, item):
         node, node_range = self._uf[item]
