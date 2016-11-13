@@ -31,3 +31,4 @@ class Edge:
 
 if __name__ == "__main__":
     cluster_finder = ClusterFinder("clustering1.txt")
+    print(cluster_finder.find_clusters(4))

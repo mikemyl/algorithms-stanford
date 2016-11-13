@@ -26,7 +26,10 @@ class UnionFind:
         if not 1 <= item <= self._size:
             raise ValueError("Item should be in the range [1..{}".format(self._size))
         parent = self._get_parent(item)
+        prev = item
         while self._uf[parent][0] != parent:
+            self._uf[prev] = self._uf[parent][0], self._uf[prev][1]
+            prev = parent
             parent = self._get_parent(parent)
         return parent
 
