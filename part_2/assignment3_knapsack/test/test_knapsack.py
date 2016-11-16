@@ -15,16 +15,20 @@ two_item_knapsack = "10 2\n" \
 class KanpsackTest(unittest.TestCase):
 
     @patch("builtins.open", create=True)
-    def test_GetMaxWeight_OnOneItemKnapsack_RetursThatItem(self, mock_open):
+    def test_Value_OnOneItemKnapsack_RetursThatItem(self, mock_open):
         mock_open.side_effect = [mock.mock_open(read_data=one_item_knapsack).return_value]
         knapsack = Knapsack(one_item_knapsack)
         self.assertEqual(knapsack.value, 5)
 
     @patch("builtins.open", create=True)
-    def test_GetMaxWeight_TwoItemsKnapsack_ReturnsBothItems(self, mock_open):
+    def test_Value_TwoItemsKnapsack_ReturnsBothItems(self, mock_open):
         mock_open.side_effect = [mock.mock_open(read_data=two_item_knapsack).return_value]
-        knapsack = Knapsack("one_item_knapsack")
+        knapsack = Knapsack(two_item_knapsack)
         self.assertEqual(knapsack.value, 13)
+
+    def test_Value_WithManyItems_ReturnsMaxValue(self):
+        knapsack = Knapsack("knapsack_test_1.txt")
+        self.assertEqual(knapsack.value, 35)
 
 
 if __name__ == '__main__':
