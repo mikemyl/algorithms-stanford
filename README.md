@@ -26,4 +26,5 @@ module of each assignment to get the result. Hopefully, he will have a look at t
 * [Programming Assignment 2 - Clustering - Kruskal's MST](part_2/assignment2_clustering)
 * [Programming Assignment 3 - Dynamic Programming - Knapsasck](part_2/assignment3_knapsack)
 * [Programming Assignment 4 - Dynamic Programming - Multiple Shortest Paths](part_2/assignment4_multiple_shortest_paths)
+* [Programming Assignment 5 - NP Completeness - Travelling Salesman Problem (TSP) - (In Progress)](part_2/assignment5_tsp)
 
