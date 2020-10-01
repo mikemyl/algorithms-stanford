@@ -1,4 +1,4 @@
-# Coursera - Algorithms Design and Analysis (Stanford University)
+# Coursera - Algorithms Design and Analysis (Stanford University)...its an amazing project...
 
 This repo holds my solutions (in Python 3) to the programming assignments for the [Coursera class - Algorithms: Design and Analysis of Stanford University](https://www.coursera.org/learn/algorithm-design-analysis/home/welcome).
 
